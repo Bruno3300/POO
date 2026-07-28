@@ -6,6 +6,6 @@
 
 ## Aulas
 
-- [22/07/2026](2026-07-22-aula) - Aula sobre Git e Markdown
+- [22/07/2026](aulas/2026-07-22) - Aula sobre Git e Markdown
 
 ## Laboratórios
