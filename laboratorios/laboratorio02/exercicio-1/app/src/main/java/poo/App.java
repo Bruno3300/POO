@@ -4,11 +4,21 @@
 package poo;
 
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
-
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        int dia = Integer.parseInt(IO.readln("Entre com o dia: "));
+        String mes = IO.readln("Entre com o mês: ");
+
+        IO.print("Estação do ano: ");
+        switch (mes.toLowerCase()) {
+            case "janeiro", "fevereiro" -> IO.println("Verão");
+            case "março" -> IO.println(dia < 20 ? "Verão" : "Outono");
+            case "abril", "maio" -> IO.println("Outono");
+            case "junho" -> IO.println(dia < 21 ? "Outono" : "Inverno");
+            case "julho", "agosto" -> IO.println("Inverno");
+            case "setembro" -> IO.println(dia < 22 ? "Inverno" : "Primavera");
+            case "outubro", "novembro" -> IO.println("Primavera");
+            case "dezembro" -> IO.println(dia < 21 ? "Primavera" : "Verão");
+            default -> IO.println("Error. Mês inválido");
+        }
     }
 }
