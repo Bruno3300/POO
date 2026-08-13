@@ -45,6 +45,17 @@ public class App {
                 IO.println("*".repeat(i));
                 e2++;
             }
+        } else if (forma.equals("3")) {
+            for (int i = 1; i <= altura; i++) {
+                if (i == 1 || i == altura) {
+                    IO.println("*".repeat(largura));
+                } else {
+                    IO.print("*");
+                    IO.print(" ".repeat(largura-2));
+                    IO.println("*");
+                }
+            }
+
         }
     }
 }
