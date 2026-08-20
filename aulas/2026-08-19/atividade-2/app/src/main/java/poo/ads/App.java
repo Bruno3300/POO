@@ -4,7 +4,36 @@
 package poo.ads;
 
 public class App {
-    static void main(String[] args) {
 
-    }
+    static void main(String[] args) {
+        Character character = new Character();
+
+        character.setName(IO.readln("Entre com o nome do seu personagem: "));
+        IO.println("Guerreiro: STR-6 DEX-3 VIT-5 MAG-1");
+        IO.println("Mago: STR-1 DEX-4 VIT-3 MAG-6");
+        IO.println("Ladino: STR-4 DEX-6 VIT-3 MAG-3");
+        do {
+            String buffer = IO.readln("Entre com a classe de seu personagem: ");
+            character.setClass(buffer.toLowerCase());
+
+        } while (character.getAttribute("str") == 0);
+
+        IO.println("----------");
+        IO.println("Ficha de Personagem");
+        IO.println("Nome: " + character.getName());
+        IO.println("Classe: " + character.getChoosenClass());
+        IO.println("HP: " + character.getHp());
+        IO.println("STR: " + character.getAttribute("str"));
+        IO.println("DEX: " + character.getAttribute("dex"));
+        IO.println("VIT: " + character.getAttribute("vit"));
+        IO.println("MAG: " + character.getAttribute("mag"));
+        IO.println("----------");
+
+        IO.println("Você entrou em um combate!!!");
+
+        }
+
+
+
+
 }
