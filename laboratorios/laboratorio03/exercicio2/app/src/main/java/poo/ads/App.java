@@ -4,11 +4,18 @@
 package poo.ads;
 
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        Horario a = new Horario(2, 30, 34);
+        Horario b = new Horario(1, 48);
+        Horario c = new Horario(15, 0, 17);
+        Horario d = new Horario(0, 57, 14);
+        Horario e = new Horario(0, 16, 58);
+
+        IO.println("a: " + a.converterSegundos());
+        IO.println("b: " + b.converterSegundos());
+        IO.println(a.calcularDiferenca(b));
+
+
     }
 }
