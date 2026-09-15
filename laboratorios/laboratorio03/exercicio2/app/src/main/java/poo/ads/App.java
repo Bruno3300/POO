@@ -12,6 +12,9 @@ public class App {
         Horario d = new Horario(0, 57, 14);
         Horario e = new Horario(0, 16, 58);
 
+        IO.println(a.porExtenso());
+        IO.println(b.porExtenso());
+
         IO.println("a: " + a.converterSegundos());
         IO.println("b: " + b.converterSegundos());
         IO.println(a.calcularDiferenca(b));

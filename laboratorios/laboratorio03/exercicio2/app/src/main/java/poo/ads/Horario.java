@@ -48,7 +48,7 @@ public class Horario {
     }
 
     public String porExtenso() {
-        return  (h > 0 ? converterExtenso(h, true) + (min == 1 ? " hora" : " horas") : "" ) +
+        return  (h > 0 ? converterExtenso(h, true) + (h == 1 ? " hora" : " horas") : "" ) +
                 (h > 0 && min > 0 && seg > 0 ? ", " : "") + (h > 0 && min > 0 && seg == 0 ? " e " : "") +
                 (min > 0 ? converterExtenso(min, false) + (min == 1 ? " minuto" : " minutos") : "" ) +
                 (h > 0 && seg > 0 || min > 0 && seg > 0 ? " e " : "") +
@@ -76,7 +76,7 @@ public class Horario {
         }
         if (isHour && u == 1) {
             return dezenas[d] + (d > 0 && u > 0 ? " e " : "") + "uma";
-        } else if (&& u == 2) {
+        } else if (isHour && u == 2) {
             return dezenas[d] + (d > 0 && u > 0 ? " e " : "") + "duas";
         } else {
             return dezenas[d] + (d > 0 && u > 0 ? " e " : "") + unidades[u];
