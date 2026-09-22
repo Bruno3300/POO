@@ -26,6 +26,11 @@ dependencies {
 
     // This dependency is used by the application.
     implementation(libs.guava)
+
+    // Source: https://mvnrepository.com/artifact/com.google.zxing/core
+    implementation("com.google.zxing:core:3.5.4")
+
+    implementation("net.datafaker:datafaker:2.7.0")
 }
 
 // Apply a specific Java toolchain to ease working on different environments.

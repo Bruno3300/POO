@@ -3,12 +3,16 @@
  */
 package poo.ads;
 
+import com.google.zxing.BarcodeFormat;
+import com.google.zxing.common.BitMatrix;
+import com.google.zxing.oned.EAN13Writer;
+import net.datafaker.Faker;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-class AppTest {
-    @Test void appHasAGreeting() {
-        App classUnderTest = new App();
-        assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
-    }
+class App{
+    Faker faker = new Faker();
+    String teste = faker.t
+    IO.println();
 }
+
