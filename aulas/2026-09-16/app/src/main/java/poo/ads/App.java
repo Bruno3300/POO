@@ -11,8 +11,31 @@ public class App {
     App app = new App();
 
     public void main(String[] args) {
-        app.cadastrar();
-        app.listarIsbnTitulo();
+        boolean sair = false;
+
+        while (!sair){
+            String option = IO.readln("Selecione a opção desejada\n" +
+                    "1. Cadastrar um livro\n" +
+                    "2. Listar somente ISBN e título de todos os livros cadastrados;\n" +
+                    "3. Consultar um livro pelo ISBN e exibir seus dados\n" +
+                    "4. Consultar livros por autor e exibir somente ISBN e título;\n" +
+                    "5. Consultar livros por ano de publicação e exibir somente ISBN e título;\n" +
+                    "6. Atualizar os dados de um livro, exceto o ISBN;\n" +
+                    "7. Remover um livro;\n" +
+                    "8. Sair");
+            switch (option){
+                case "1" -> app.cadastrar();
+                case "2" -> app.listarTodosIsbnTitulo();
+                case "3" -> app.consultarLivroIsbn();
+                case "4" -> app.listarLivrosPorAutor();
+                case "5" -> app.consultarPorAno();
+                case "6" -> app.atualizarDados();
+                case "7" -> app.remover();
+                case "8" -> sair = true;
+                default -> IO.println("Entrada incorreta, entre com o número equivalente da opção desejada.");
+
+            }
+        }
 
 
     }
@@ -26,13 +49,13 @@ public class App {
 
     //    String isbn = IO.readln("Entre com o ISBN do livro: ");
     //    String title = IO.readln("Entre com o título do livro: ");
-    //    String author = IO.readln("Ente com o autor do livro: ");
+    //    String author = IO.readln("Entre com o autor do livro: ");
     //    int publicationYear = Integer.parseInt(IO.readln("Entre com o ano de publicação do livro"));
 
         Livros.put(isbn, new Livro(isbn, title, author, publicationYear));
     }
 
-    public void listarIsbnTitulo() {
+    public void listarTodosIsbnTitulo() {
         Livros.forEach((k, v) ->
                 IO.println("ISBN: " + k + " | Título: " + v.getTitle()));
     }
@@ -42,7 +65,7 @@ public class App {
         IO.println(Livros.get(isbn));
     }
 
-    public void livrosPorAutor(){
+    public void listarLivrosPorAutor(){
         String author = IO.readln("Entre com o nome do autor: ");
         Livros.forEach((k, v) -> {
             if (author.equals(v.getAuthor())) {
@@ -50,6 +73,50 @@ public class App {
             }
         });
     }
+
+    public void  consultarPorAno() {
+        int publicationYear = Integer.parseInt(IO.readln("Entre com o ano de publicação: "));
+        Livros.forEach((k, v) -> {
+            if (v.getPublicationYear() == publicationYear) {
+                IO.println("ISBN: " + k + " | Título: " + v.getTitle());
+            }
+        });
+
+    }
+
+    public void atualizarDados(){
+        String isbn = IO.readln("Entre com o ISBN do livro que será editado: ");
+        Livro aux = Livros.get(isbn);
+
+        if (aux != null) {
+            boolean sair = false;
+            String buffer;
+            while (!sair) {
+                String option = IO.readln("Entre com o tipo de dado que será alterado\n" +
+                        "1. Título\n" +
+                        "2. Autor\n" +
+                        "3. Ano de publicação\n" +
+                        "4. Sair");
+                buffer = IO.readln("Entre com o dado atualizado: ");
+                switch (option) {
+                    case "1" -> aux.setTitle(buffer);
+                    case "2" -> aux.setAuthor(buffer);
+                    case "3" -> aux.setPublicationYear(Integer.parseInt(buffer));
+                    case "4" -> sair = true;
+                    default -> IO.println("Entrada incorreta, entre com o número equivalente da opção desejada.");
+                }
+                Livros.put(isbn, aux);
+                IO.println("Dados atuais do livro: \n" + aux);
+            }
+        }
+    }
+
+    public void remover(){
+        String isbn = IO.readln("Entre com o ISBN do livro que será removido: ");
+        Livros.remove(isbn);
+    }
+
+
 }
 
      //   HashMap<String, String> mapa = new HashMap<>();
