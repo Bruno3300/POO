@@ -57,6 +57,37 @@ classDiagram
         +acelerar(v: int) void
     }
 
-    Carro o-- Motor
+    Carro  o-- Motor
+
+```
+
+### Composição
+
+```mermaid
+classDiagram
+    
+    direction LR
+    
+    class Aluno {
+        -nome: String
+        -email: String
+        -matricula: String
+        -endereco: Endereco
+        +Aluno(nm: String, em: String, mt: String, en: Endereço)
+ }
+ 
+    class Endereco {
+        -pais: String
+        -uf: String
+        -cidade: String
+        -bairro: String
+        -rua: String
+        -cep: String
+        -numero: String
+        
+        +Endereco(p: String, uf: String, c: String, b: String, r: String, cep: String, n: String)
+ }
+ 
+ Aluno "1" *-- "1" Endereco
 
 ```

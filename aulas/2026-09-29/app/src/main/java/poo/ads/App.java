@@ -7,11 +7,15 @@ public class App {
 
     public static void main(String[] args) {
 
-        Motor v8 = new Motor(100, 8);
-        Carro fusca = new Carro("VW", v8);
+    //    Motor v8 = new Motor(100, 8);
+    //    Carro fusca = new Carro("VW", v8);
+//
+    //    fusca = null;
+//
+    //    Carro c = new Carro("gm", v8);
 
-        fusca = null;
-
-        Carro c = new Carro("gm", v8);
+        Aluno juca = new Aluno("Juca", "juca@gmail.com", "123456",
+                new Endereco("pais", "uf", "cidade", "bairro", "rua", "cep", "1"));
     }
 }
+
