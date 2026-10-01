@@ -13,4 +13,15 @@ public class Motor {
         status = !status;
     }
 
+    public boolean getStatus() {
+        return status;
+    }
+
+    @Override
+    public String toString() {
+        return "Motor{" +
+                "tipo='" + tipo + '\'' +
+                ", ligado=" + status +
+                '}';
+    }
 }

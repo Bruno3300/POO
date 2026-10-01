@@ -20,5 +20,5 @@ classDiagram
         +alterarStatus() void
     }
     
-    Aviao "1" o-- "8" Motor
+    Aviao "1" *-- "1...8" Motor
 ```

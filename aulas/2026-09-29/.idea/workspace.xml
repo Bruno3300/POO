@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ecac1dab-10c9-4e84-b1a8-a299b408212b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/ads/poo/Aviao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/ads/poo/Motor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../--/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/../../--/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../--/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../--/gradle.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ads/poo/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ads/poo/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ads/poo/Aviao.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ads/poo/Aviao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ads/poo/Motor.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ads/poo/Motor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,10 +32,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="GradleScriptDefinitionsStorage" workingDir="$PROJECT_DIR$" gradleHome="/opt/gradle/gradle-9.2.1" javaHome="/usr/java/jdk-25-oracle-x64" gradleVersion="9.2.1" />
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="GradleScriptDefinitionsStorage" workingDir="$PROJECT_DIR$" gradleHome="$USER_HOME$/.gradle/wrapper/dists/gradle-9.2.1-bin/2t0n5ozlw9xmuyvbp7dnzaxug/gradle-9.2.1" javaHome="/usr/java/jdk-25-oracle-x64" gradleVersion="9.2.1" />
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="3K1P6q3IcxgT0Q36Eut401DvjL7" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -43,6 +43,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Gradle.2026-09-29 [:app:ads.poo.App.main()].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -51,6 +52,7 @@
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/home/aluno/POO/aulas/2026-09-29",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.keymap",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -70,6 +72,7 @@
       <option name="presentableId" value="Default" />
       <updated>1790721928913</updated>
       <workItem from="1790721930004" duration="1973000" />
+      <workItem from="1790812017140" duration="2680000" />
     </task>
     <servers />
   </component>

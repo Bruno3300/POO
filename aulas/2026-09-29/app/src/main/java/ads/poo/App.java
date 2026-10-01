@@ -4,11 +4,18 @@
 package ads.poo;
 
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
-
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        Aviao a = new Aviao(5, 200, 10000, 4, "Turbina");
+
+        a.alterarStatusGeral();
+
+        IO.println(a);
+
+        a.alterarStatusUnico(1);
+
+        a.alterarStatusUnico(0);
+
+        IO.println(a);
+
     }
 }
