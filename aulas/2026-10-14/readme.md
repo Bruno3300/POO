@@ -1,9 +1,78 @@
 ```mermaid
 classDiagram
     
-    direction LR
+    class Produto {
+        -id: int
+        -nome: String
+        -preco: double
+    }
     
-    class {
+    class Livro {
+        -autor: String
+    }
+    
+    class Revista {
+        -segmento: String
+    }
+    
+    class Jornal {
+        -editor: String
+    }
+    
+    class Quadrinho {
+        -ilustrador: String
+    }
+    
+    class Periodico {
+        -issn: String
+        -frequenciaPublicacao: String
+    }
+    
+    Produto |>-- Livro
+    Livro |>-- Quadrinho
+    
+    Produto |>-- Periodico
+    
+    Periodico |>-- Jornal
+    Periodico |>-- Revista
+    
+    
+```
+
+```mermaid
+classDiagram
+    
+    class Carro {
         
- }
+    }
+    
+    class Aviao {
+        
+    }
+    
+    class Barco {
+        
+    }
+    
+    class Caminhao {
+        
+    }
+    
+    class Terrestre {
+        -numeroRodas: int
+    }
+    
+    class Veiculo {
+        
+        -velocidadeMaxima: int
+        
+        +acelerar(aceleracao: int, segundos: int)void
+    }
+    
+    Terrestre |>-- Carro
+    Terrestre |>-- Aviao
+    
+    Veiculo |>-- Terrestre
+    Veiculo |>-- Barco
+    Veiculo |>-- Caminhao
 ```
