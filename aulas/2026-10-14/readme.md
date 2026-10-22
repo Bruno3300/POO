@@ -47,7 +47,7 @@ classDiagram
     }
     
     class Aviao {
-        
+        -tipoMotor; String
     }
     
     class Barco {
@@ -63,16 +63,16 @@ classDiagram
     }
     
     class Veiculo {
-        
+        -velocidadeAtual: int
         -velocidadeMaxima: int
         
         +acelerar(aceleracao: int, segundos: int)void
     }
     
     Terrestre |>-- Carro
-    Terrestre |>-- Aviao
+    Terrestre |>-- Caminhao
     
     Veiculo |>-- Terrestre
     Veiculo |>-- Barco
-    Veiculo |>-- Caminhao
+    Veiculo |>-- Aviao
 ```

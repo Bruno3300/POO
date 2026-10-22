@@ -1,0 +1,21 @@
+package poo.ads;
+
+public class Personagem {
+    protected int vida;
+    protected int ataque;
+    protected double velocidade;
+
+    public Personagem(int vida, int ataque, double velocidade) {
+        this.vida = vida;
+        this.ataque = ataque;
+        this.velocidade = velocidade;
+    }
+
+    public String atacar() {
+        return "Personagem atacou com força " + this.velocidade;
+    }
+
+    public String mover() {
+        return "Personagem se moveu com velocidade " + this.ataque;
+    }
+}
