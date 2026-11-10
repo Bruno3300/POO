@@ -10,7 +10,8 @@ public class App {
         Arqueiro arq = new Arqueiro();
         Cavaleiro cav = new Cavaleiro();
 
-        IO.println(ald.mover());
+        IO.println(ald.coletarMadeira());
+        IO.println(ald.coletarOuro());
         IO.println(arq.mover());
         IO.println(cav.mover());
     }
